@@ -10,7 +10,7 @@ def print_result(name: str, result):
     print(f"\n{'='*40}")
     print(f"Algoritmo : {name}")
     if result.found:
-        print(f"Solução   : {' → '.join(result.actions)}")
+        print(f"Solução   : {' -> '.join(result.actions)}")
         print(f"Custo     : {result.path_cost}")
         print(f"Profund.  : {result.depth}")
     else:
@@ -21,8 +21,18 @@ def print_result(name: str, result):
 
 
 if __name__ == "__main__":
-    initial = State((2, 8, 3, 1, 6, 4, 7, 0, 5))   # ~20 movimentos até a solução
+    initial2 = State((2, 8, 1, 3, 6, 4, 7, 0, 5))   
 
+    print("Estado inicial:")
+    print(initial2)
+
+    print_result("BFS",  BFS().search(initial2))
+    print_result("DFS",  DFS().search(initial2))
+    print_result("A*",   AStar().search(initial2))
+
+    print("\n" + "="*40 + "\n")
+
+    initial = State((1, 2, 3, 4, 5, 7, 6, 0, 8)) 
     print("Estado inicial:")
     print(initial)
 
