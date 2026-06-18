@@ -21,21 +21,21 @@ def print_result(name: str, result):
 
 
 if __name__ == "__main__":
-    initial2 = State((2, 8, 1, 3, 6, 4, 7, 0, 5))   
+    initialnaofuncional = State((2, 8, 3, 1, 6, 4, 7, 0, 5))   
 
     print("Estado inicial:")
-    print(initial2)
+    print(initialnaofuncional)
 
-    print_result("BFS",  BFS().search(initial2))
-    print_result("DFS",  DFS().search(initial2))
-    print_result("A*",   AStar().search(initial2))
+    print_result("BFS",  BFS().search(initialnaofuncional))
+    print_result("DFS",  DFS().search(initialnaofuncional))
+    print_result("A*",   AStar().search(initialnaofuncional))
 
     print("\n" + "="*40 + "\n")
 
-    initial = State((1, 2, 3, 4, 5, 7, 6, 0, 8)) 
+    initialfuncional = State((2, 8, 1, 3, 6, 4, 7, 0, 5)) # Trocando o 1 e o 3 de lugar para que funcione
     print("Estado inicial:")
-    print(initial)
+    print(initialfuncional)
 
-    print_result("BFS",  BFS().search(initial))
-    print_result("DFS",  DFS().search(initial))
-    print_result("A*",   AStar().search(initial))
+    print_result("BFS",  BFS().search(initialfuncional))
+    print_result("DFS",  DFS().search(initialfuncional))
+    print_result("A*",   AStar().search(initialfuncional))
